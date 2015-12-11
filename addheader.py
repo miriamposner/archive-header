@@ -6,7 +6,7 @@ import argparse
 message = 'This is a static, archived version of a site created for Digital Humanities 101 at the University of California, Los Angeles, in Fall 2014'
 programLink = '<a href=\"www.google.com\"> UCLA Digital Humanities Program</a>'
 syllabusLink = '<a href=\"www.google.com\"> Syllabus for DH101</a>'
-newDiv = '<div style=\"position:fixed;left:0;top:0;width:100%!important;height=20px;background-color:#FF6A6A;\">'+message+ ' '+programLink+ ' '+syllabusLink+'</div>'
+newDiv = '<div style=\"position:fixed;left:0;top:0;width:100%!important;height=30px;background-color:#000000;padding:5px;z-index:999;\">'+message+ ' '+programLink+ ' '+syllabusLink+'</div>'
 
 
 def main(message, links):
@@ -17,7 +17,7 @@ def main(message, links):
 
 
 	#compose arguments into the message
-	newDiv = '<div style=\"position:fixed;left:0;top:0;width:100%!important;height=20px;background-color:#FF6A6A;\">'+message+' '+' '.join(composedLinks)+'</div>'
+	newDiv = '<div style=\"position:fixed;left:0;top:0;width:100%!important;height=40px;background-color:#000000;z-index:998\">'+message+' '+' '.join(composedLinks)+'</div>'
 
 	for root, dirs, files in os.walk('.'):
 		for ffile in files:
